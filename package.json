@@ -1,0 +1,27 @@
+{
+  "name": "learning-react",
+  "version": "0.0.1",
+  "description": "A Hands On Tutorial with Sample Codes for Small React Apps to Learn about it",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mappmechanic/learning-react.git"
+  },
+  "keywords": [
+    "reactjs",
+    "react",
+    "tutorial"
+  ],
+  "author": "mappmechanic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mappmechanic/learning-react/issues"
+  },
+  "homepage": "https://github.com/mappmechanic/learning-react#readme",
+  "devDependencies": {
+    "react": "^15.1.0"
+  }
+}
