@@ -21,7 +21,6 @@ module.exports = {
       contentBase: "./public",
       colors: true,
       historyApiFallback: true,
-      inline: true,
-      hot:true
+      inline: true
     }
 };
