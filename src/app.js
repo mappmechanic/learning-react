@@ -1,14 +1,19 @@
 import React, {Component} from 'react';
 import {render} from 'react-dom';
+import './app.css';
 import 'materialize-css/bin/materialize.js';
 import 'materialize-css/bin/materialize.css';
 
 class App extends Component {
   render() {
     return (
-      <nav className="blue-grey darken-4">
+      <nav className="blue-grey darken-3">
         <div className="nav-wrapper">
-          <a href="#" className="brand-logo">Logo</a>
+          <div className="brand-logo">
+            <a href="#">
+              mappmechanic
+            </a>
+          </div>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
             <li><a href="nav1.html">Nav Option 1</a></li>
             <li><a href="nav2.html">Nav Option 2</a></li>
