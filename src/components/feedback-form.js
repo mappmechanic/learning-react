@@ -9,7 +9,6 @@ export default class FeedbackForm extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    debugger;
     var formData = {
       firstName:this.refs.firstName.value,
       lastName:this.refs.lastName.value,
@@ -18,7 +17,6 @@ export default class FeedbackForm extends Component {
       email:this.refs.email.value,
       feedback:this.refs.feedback.value
     }
-    console.log('Form Data :',formData);
   }
 
   render() {
