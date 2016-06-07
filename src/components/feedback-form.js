@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {render} from 'react-dom';
+import fetch from 'isomorphic-fetch';
 
 export default class FeedbackForm extends Component {
   constructor(...args) {
@@ -17,6 +18,18 @@ export default class FeedbackForm extends Component {
       email:this.refs.email.value,
       feedback:this.refs.feedback.value
     }
+    // Making a Server Call
+    fetch('http://localhost:3000/feedback',{
+      method:'POST',
+      body: JSON.stringify(formData),
+      headers:new Headers({
+        'Content-Type':'application/json'
+      })
+    })
+    .then((response) => response.json())
+    .then(json => {
+      debugger;
+    });
   }
 
   render() {
