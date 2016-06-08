@@ -5,6 +5,7 @@ import fetch from 'isomorphic-fetch';
 export default class FeedbackForm extends Component {
   constructor(...args) {
     super(...args);
+    this.baseUrl = 'http://localhost:3000';
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -19,7 +20,7 @@ export default class FeedbackForm extends Component {
       feedback:this.refs.feedback.value
     }
     // Making a Server Call
-    fetch('http://localhost:3000/feedback',{
+    fetch(this.baseUrl+'/feedback',{
       method:'POST',
       body: JSON.stringify(formData),
       headers:new Headers({
