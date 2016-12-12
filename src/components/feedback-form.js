@@ -17,7 +17,7 @@ export default class FeedbackForm extends Component {
       organization:this.refs.organization.value,
       selectedTutorial:this.refs.selectedTutorial.value,
       email:this.refs.email.value,
-      feedback:this.refs.feedback.value
+      feedback:this.refs.feedback.value,
     }
     // Making a Server Call
     fetch(this.baseUrl+'/feedback',{
