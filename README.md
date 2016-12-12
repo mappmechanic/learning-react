@@ -5,7 +5,37 @@ Learning React JS by Writing Small Example Apps
 
 We will create a new folder named *"ReactApp"* and then inside it create folders *'public'*, *'src'*.
 
+Also, create a new file called *webpack.config.js* and put the following code in the file:
 
+```javascript
+module.exports = {
+    entry: "./src/app.js",
+    output: {
+        path: __dirname + '/public',
+        filename: "bundle.js"
+    },
+    module: {
+        loaders: [
+            { test: /\.css$/, loader: "style-loader!css-loader" },
+            {test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'file-loader'},
+            {
+              test: /\.js?$/,
+              exclude: /node_modules/,
+              loader: 'babel',
+              query: {
+                presets: ['es2015','react']
+              }
+            }
+        ]
+    },
+    devServer: {
+      contentBase: "./public",
+      colors: true,
+      historyApiFallback: true,
+      inline: true
+    }
+};
+```
 
 #Step 2:
 
